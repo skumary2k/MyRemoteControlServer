@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification">
+      <HintPath>..\packages\Hardcodet.NotifyIcon.Wpf.1.0.5\lib\net45\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WPFSpark.1.1\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
@@ -112,6 +115,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\exit.ico" />
+    <Resource Include="Assets\Images\start.ico" />
+    <Resource Include="Assets\Images\stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\help.ico" />
+    <Resource Include="Assets\Images\info.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/images/remote.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/images/help.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/images/info.ico")]
 
 

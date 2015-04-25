@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:c="clr-namespace:MyRemoteControlServer.Commands"
         xmlns:wpfspark="clr-namespace:WPFSpark;assembly=WPFSpark"
-        Title="My Remote Control Server" Height="300" Width="425" Icon="../Assets/Images/Remote.png">
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        Title="My Remote Control Server" MaxHeight="300" MaxWidth="425" Icon="../Assets/Images/logo.png">
     <Window.Resources>
         <c:CommandReference x:Key="ServerCommandReference" Command="{Binding ServerCommand}" />
         <LinearGradientBrush x:Key="CheckedStateBrush"
@@ -39,20 +40,45 @@
     <Grid>
         <Menu HorizontalAlignment="Left" VerticalAlignment="Top" Width="420" Height="25">
             <MenuItem Header="File" VerticalAlignment="Center" Height="25">
-                <MenuItem Header="Start" HorizontalAlignment="Left" Width="140"
-			  Click="MenuItem_Click" />
-                <MenuItem Header="Stop" HorizontalAlignment="Left" Width="140"
-			  Click="MenuItem_Click"/>
+                <MenuItem Header="Start" HorizontalAlignment="Left" Width="140" Command="{Binding ServerCommand}">
+                    <MenuItem.Icon>
+                        <Image Width="16"
+                                   Height="16"
+                                   Source="../Assets/Images/start.ico" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Stop" HorizontalAlignment="Left" Width="140" Command="{Binding ServerCommand}">
+                    <MenuItem.Icon>
+                        <Image Width="16"
+                                   Height="16"
+                                   Source="../Assets/Images/stop.ico" />
+                    </MenuItem.Icon>
+                </MenuItem>
                 <Separator HorizontalAlignment="Left" Width="140"/>
-                <MenuItem Header="Exit" HorizontalAlignment="Left" Width="140"
-			  Click="MenuItem_Click"/>
+                <MenuItem Header="Exit" HorizontalAlignment="Left" Width="140" Command="{Binding ExitCommand}">
+                    <MenuItem.Icon>
+                        <Image Width="16"
+                                   Height="16"
+                                   Source="../Assets/Images/exit.ico" />
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
             <MenuItem Header="Help" Height="25">
-                <MenuItem Header="View Help" HorizontalAlignment="Left" Width="140"
-			  Click="MenuItem_Click"/>
+                <MenuItem Header="View Help" HorizontalAlignment="Left" Width="140" Click="MenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Width="16"
+                                   Height="16"
+                                   Source="../Assets/Images/help.ico" />
+                    </MenuItem.Icon>
+                </MenuItem>
                 <Separator HorizontalAlignment="Left" Width="140"/>
-                <MenuItem Header="About" HorizontalAlignment="Left" Width="140" 
-			  Click="MenuItem_Click"/>
+                <MenuItem Header="About" HorizontalAlignment="Left" Width="140" Click="MenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Width="16"
+                                   Height="16"
+                                   Source="../Assets/Images/info.ico" />
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
         </Menu>
         <wpfspark:ToggleSwitch Background="Black"
@@ -123,5 +149,47 @@
                 </LinearGradientBrush>
             </wpfspark:ToggleSwitch.ThumbBorderBrush>
         </wpfspark:ToggleSwitch>
+        <tb:TaskbarIcon x:Name="MyNotifyIcon"
+                        IconSource="../Assets/Images/logo.ico"
+                        ToolTipText="My remote control server"
+                        TrayContextMenuOpen="MyNotifyIcon_TrayContextMenuOpen"
+                        PreviewTrayContextMenuOpen="MyNotifyIcon_PreviewTrayContextMenuOpen">
+
+            <!-- Set a simple context menu  -->
+            <!-- the data context of the context menu is the NotifyIcon itself (see more about this in DataBinding samples) -->
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Start"
+                              CommandParameter="{Binding}">
+                        <MenuItem.Icon>
+                            <Image Width="16"
+                                   Height="16"
+                                   Source="../Assets/Images/start.ico" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Header="Stop"
+                              CommandParameter="{Binding}">
+                        <MenuItem.Icon>
+                            <Image Width="16"
+                                   Height="16"
+                                   Source="../Assets/Images/stop.ico" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <Separator />
+
+                    <MenuItem Header="Exit"
+                              CommandParameter="{Binding}">
+                        <MenuItem.Icon>
+                            <Image Width="16"
+                                   Height="16"
+                                   Source="../Assets/Images/exit.ico" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+
+        </tb:TaskbarIcon>
     </Grid>
 </Window>

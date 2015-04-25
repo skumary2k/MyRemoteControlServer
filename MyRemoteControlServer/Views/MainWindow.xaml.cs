@@ -31,5 +31,18 @@ namespace MyRemoteControlServer
         {
 
         }
+
+        private void MyNotifyIcon_TrayContextMenuOpen(object sender, System.Windows.RoutedEventArgs e)
+        {
+            //OpenEventCounter.Text = (int.Parse(OpenEventCounter.Text) + 1).ToString();
+        }
+
+        private void MyNotifyIcon_PreviewTrayContextMenuOpen(object sender, System.Windows.RoutedEventArgs e)
+        {
+            //marking the event as handled suppresses the context menu
+            //e.Handled = (bool)SuppressContextMenu.IsChecked;
+
+            //PreviewOpenEventCounter.Text = (int.Parse(PreviewOpenEventCounter.Text) + 1).ToString();
+        }
     }
 }

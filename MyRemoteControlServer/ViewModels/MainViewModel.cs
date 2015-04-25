@@ -46,6 +46,7 @@ namespace MyRemoteControlServer.ViewModels
 
         private void StartOrStopServer()
         {
+
         }
 
         private void Exit()

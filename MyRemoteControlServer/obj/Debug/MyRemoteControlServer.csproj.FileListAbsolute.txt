@@ -16,3 +16,6 @@ C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteCont
 C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\Views\MainWindow.baml
 C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\MyRemoteControlServer_MarkupCompile.lref
+C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\bin\Debug\Hardcodet.Wpf.TaskbarNotification.pdb
+C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\bin\Debug\Hardcodet.Wpf.TaskbarNotification.xml
