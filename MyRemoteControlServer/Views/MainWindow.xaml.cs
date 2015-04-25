@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyRemoteControlServer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,14 +24,10 @@ namespace MyRemoteControlServer
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new MainViewModel();
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
         {
 
         }

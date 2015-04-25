@@ -70,8 +70,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Commads\CommandReferences.cs" />
-    <Compile Include="Commads\DelegatedCommand.cs" />
+    <Compile Include="Commands\CommandReferences.cs" />
+    <Compile Include="Commands\DelegatedCommand.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">

@@ -1,7 +1,5 @@
 C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\bin\Debug\MyRemoteControlServer.exe.config
 C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\MyRemoteControlServer.csprojResolveAssemblyReference.cache
-C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\MainWindow.baml
-C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\MainWindow.g.cs
 C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\App.g.cs
 C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\MyRemoteControlServer_MarkupCompile.cache
 C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\MyRemoteControlServer.g.resources
@@ -14,3 +12,7 @@ C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteCont
 C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\bin\Debug\Microsoft.Expression.Interactions.dll
 C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\bin\Debug\WPFSpark.dll
+C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\Views\MainWindow.g.cs
+C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\Views\MainWindow.baml
+C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\santosh_kumar_panda\Documents\GitHub\MyRemoteControlServer\MyRemoteControlServer\obj\Debug\MyRemoteControlServer_MarkupCompile.lref

@@ -13,5 +13,11 @@ namespace MyRemoteControlServer
     /// </summary>
     public partial class App : Application
     {
+        private void OnStartup(object sender, StartupEventArgs e)
+        {
+            var view = new MainWindow();
+            view.DataContext = new ViewModels.MainViewModel();
+            view.Show();
+        }
     }
 }
