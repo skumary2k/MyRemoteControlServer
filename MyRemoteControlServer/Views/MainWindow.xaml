@@ -4,7 +4,7 @@
         xmlns:c="clr-namespace:MyRemoteControlServer.Commands"
         xmlns:wpfspark="clr-namespace:WPFSpark;assembly=WPFSpark"
         xmlns:tb="http://www.hardcodet.net/taskbar"
-        Title="My Remote Control Server" MaxHeight="300" MaxWidth="425" Icon="../Assets/Images/logo.png">
+        Title="My Remote Control Server" MaxHeight="300" MaxWidth="425" Icon="../Assets/Images/logo.png" ResizeMode="CanMinimize" StateChanged="Window_StateChanged">
     <Window.Resources>
         <c:CommandReference x:Key="ServerCommandReference" Command="{Binding ServerCommand}" />
         <LinearGradientBrush x:Key="CheckedStateBrush"
@@ -40,14 +40,14 @@
     <Grid>
         <Menu HorizontalAlignment="Left" VerticalAlignment="Top" Width="420" Height="25">
             <MenuItem Header="File" VerticalAlignment="Center" Height="25">
-                <MenuItem Header="Start" HorizontalAlignment="Left" Width="140" Command="{Binding ServerCommand}">
+                <MenuItem Header="Start" HorizontalAlignment="Left" Width="140" Command="{Binding StartCommand}">
                     <MenuItem.Icon>
                         <Image Width="16"
                                    Height="16"
                                    Source="../Assets/Images/start.ico" />
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Stop" HorizontalAlignment="Left" Width="140" Command="{Binding ServerCommand}">
+                <MenuItem Header="Stop" HorizontalAlignment="Left" Width="140" Command="{Binding StopCommand}">
                     <MenuItem.Icon>
                         <Image Width="16"
                                    Height="16"
@@ -159,8 +159,7 @@
             <!-- the data context of the context menu is the NotifyIcon itself (see more about this in DataBinding samples) -->
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="Start"
-                              CommandParameter="{Binding}">
+                    <MenuItem Header="Start" Command="{Binding StartCommand}">
                         <MenuItem.Icon>
                             <Image Width="16"
                                    Height="16"
@@ -168,8 +167,7 @@
                         </MenuItem.Icon>
                     </MenuItem>
 
-                    <MenuItem Header="Stop"
-                              CommandParameter="{Binding}">
+                    <MenuItem Header="Stop" Command="{Binding StopCommand}">
                         <MenuItem.Icon>
                             <Image Width="16"
                                    Height="16"
@@ -179,8 +177,7 @@
 
                     <Separator />
 
-                    <MenuItem Header="Exit"
-                              CommandParameter="{Binding}">
+                    <MenuItem Header="Exit" Command="{Binding ExitCommand}">
                         <MenuItem.Icon>
                             <Image Width="16"
                                    Height="16"
@@ -191,5 +188,7 @@
             </tb:TaskbarIcon.ContextMenu>
 
         </tb:TaskbarIcon>
+        <Label Content="Status: " HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="62" FontWeight="Bold" FontSize="16"/>
+        <Label Content="{Binding StatusMessage}" HorizontalAlignment="Left" Margin="67,193,0,0" VerticalAlignment="Top" Width="338"/>
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
-﻿using MyRemoteControlServer.Commands;
+﻿using log4net;
+using MyRemoteControlServer.Commands;
 using System.Windows;
 using System.Windows.Input;
 
@@ -6,9 +7,13 @@ namespace MyRemoteControlServer.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        private bool isChecked;
+        private bool isChecked = true;
         private DelegateCommand exitCommand;
         private DelegateCommand serverCommand;
+        private DelegateCommand startCommand;
+        private DelegateCommand stopCommand;
+        private string statusMsg;
+        private static ILog logger = LogManager.GetLogger(typeof(MainViewModel));
 
         public bool IsChecked
         {
@@ -17,6 +22,16 @@ namespace MyRemoteControlServer.ViewModels
             {
                 isChecked = value;
                 OnPropertyChanged("IsChecked");
+            }
+        }
+
+        public string StatusMessage
+        {
+            get { return statusMsg; }
+            set
+            {
+                statusMsg = value;
+                OnPropertyChanged("StatusMessage");
             }
         }
 
@@ -32,6 +47,30 @@ namespace MyRemoteControlServer.ViewModels
             }
         }
 
+        public ICommand StartCommand
+        {
+            get
+            {
+                if (startCommand == null)
+                {
+                    startCommand = new DelegateCommand(StartServer);
+                }
+                return startCommand;
+            }
+        }
+
+        public ICommand StopCommand
+        {
+            get
+            {
+                if (stopCommand == null)
+                {
+                    stopCommand = new DelegateCommand(StopServer);
+                }
+                return stopCommand;
+            }
+        }
+
         public ICommand ServerCommand
         {
             get
@@ -44,9 +83,23 @@ namespace MyRemoteControlServer.ViewModels
             }
         }
 
+        public MainViewModel()
+        {
+            this.statusMsg = ApplcationConstants.SERVER_NOT_STARTED;
+        }
         private void StartOrStopServer()
         {
 
+        }
+
+        private void StartServer()
+        {
+            logger.Info("Starting server.");
+        }
+
+
+        private void StopServer()
+        {
         }
 
         private void Exit()

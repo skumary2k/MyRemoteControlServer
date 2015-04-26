@@ -44,5 +44,13 @@ namespace MyRemoteControlServer
 
             //PreviewOpenEventCounter.Text = (int.Parse(PreviewOpenEventCounter.Text) + 1).ToString();
         }
+
+        private void Window_StateChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState != System.Windows.WindowState.Minimized)
+                this.ShowInTaskbar = false;
+            else
+                this.Hide();
+        }
     }
 }
