@@ -27,22 +27,14 @@ namespace MyRemoteControlServer
             this.DataContext = new MainViewModel();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void MyNotifyIcon_TrayContextMenuOpen(object sender, System.Windows.RoutedEventArgs e)
         {
-            //OpenEventCounter.Text = (int.Parse(OpenEventCounter.Text) + 1).ToString();
+
         }
 
         private void MyNotifyIcon_PreviewTrayContextMenuOpen(object sender, System.Windows.RoutedEventArgs e)
         {
-            //marking the event as handled suppresses the context menu
-            //e.Handled = (bool)SuppressContextMenu.IsChecked;
 
-            //PreviewOpenEventCounter.Text = (int.Parse(PreviewOpenEventCounter.Text) + 1).ToString();
         }
 
         private void Window_StateChanged(object sender, EventArgs e)
@@ -51,6 +43,11 @@ namespace MyRemoteControlServer
                 this.ShowInTaskbar = false;
             else
                 this.Hide();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            (this.DataContext as MainViewModel).WindowOnClosingCommand.Execute(null);
         }
     }
 }

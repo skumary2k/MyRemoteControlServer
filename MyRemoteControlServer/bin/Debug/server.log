@@ -1,68 +1,31 @@
-2015-04-28 15:08:10,215 [11] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
-2015-04-28 15:08:17,448 [12] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
-2015-04-28 15:08:20,801 [12] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
-2015-04-28 15:08:47,482 [12] ERROR MyRemoteControlServer.ViewModels.MainViewModel - Exception occured: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine.
-2015-04-28 15:09:04,490 [11] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
-2015-04-28 15:09:04,498 [9] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
-2015-04-28 15:09:05,070 [9] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
-2015-04-28 15:09:29,614 [11] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
-2015-04-28 15:09:29,622 [13] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
-2015-04-28 15:09:45,655 [13] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
-2015-04-28 15:10:10,963 [11] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
-2015-04-28 15:10:10,971 [14] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
-2015-04-28 15:10:15,621 [14] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
-2015-04-28 15:10:37,557 [14] ERROR MyRemoteControlServer.ViewModels.MainViewModel - Exception occured: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine.
-2015-04-28 15:10:58,225 [11] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
-2015-04-28 15:10:58,236 [12] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
-2015-04-28 15:10:59,893 [12] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
-2015-04-28 15:11:16,228 [11] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
-2015-04-28 15:11:16,240 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
-2015-04-28 15:11:19,442 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
-2015-04-28 15:11:47,011 [9] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
-2015-04-28 15:11:47,082 [10] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
-2015-04-28 15:11:49,973 [10] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
-2015-04-28 15:12:18,536 [10] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 15:12:27,847 [10] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Right
-2015-04-28 15:12:54,842 [10] ERROR MyRemoteControlServer.ViewModels.MainViewModel - Exception occured: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine.
-2015-04-28 15:39:26,766 [9] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
-2015-04-28 15:39:26,835 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
-2015-04-28 15:39:30,052 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
-2015-04-28 15:39:37,021 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 15:39:38,958 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Right
-2015-04-28 15:40:05,296 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 15:40:05,310 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Up
-2015-04-28 15:40:07,048 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 15:40:07,069 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Up
-2015-04-28 15:40:08,405 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 15:40:08,420 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Down
-2015-04-28 15:40:08,991 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 15:40:09,004 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Down
-2015-04-28 15:40:09,660 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 15:40:09,674 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Down
-2015-04-28 15:40:10,993 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 15:40:11,034 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Right
-2015-04-28 15:40:12,330 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 15:40:12,344 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Left
-2015-04-28 16:40:02,075 [9] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
-2015-04-28 16:40:02,288 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
-2015-04-28 16:40:02,672 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
-2015-04-28 16:40:13,584 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 16:40:13,588 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Up
-2015-04-28 16:40:16,763 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 16:40:16,783 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Up
-2015-04-28 16:40:18,575 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 16:40:18,589 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Down
-2015-04-28 16:40:19,603 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 16:40:19,617 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Down
-2015-04-28 16:40:20,496 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 16:40:20,509 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Down
-2015-04-28 16:40:21,750 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 16:40:21,764 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Right
-2015-04-28 16:40:26,764 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 16:40:26,778 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Left
-2015-04-28 16:40:28,117 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 16:40:28,133 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Right
-2015-04-28 16:40:29,273 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 16:40:29,287 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Right
-2015-04-28 16:40:30,016 [3] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Connected to remote bluetooth device.
-2015-04-28 16:40:30,029 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - Right
+2015-04-29 00:25:01,447 [9] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
+2015-04-29 00:25:01,491 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
+2015-04-29 00:25:01,514 [3] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
+2015-04-29 00:25:06,280 [3] ERROR MyRemoteControlServer.ViewModels.MainViewModel - Exception occured: Thread was being aborted.
+2015-04-29 00:25:15,369 [9] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - WindowOnClosing
+2015-04-29 00:27:06,475 [9] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
+2015-04-29 00:27:06,518 [10] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
+2015-04-29 00:27:06,541 [10] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
+2015-04-29 00:27:11,100 [10] ERROR MyRemoteControlServer.ViewModels.MainViewModel - Exception occured: Thread was being aborted.
+2015-04-29 00:27:18,615 [9] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
+2015-04-29 00:27:18,644 [11] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
+2015-04-29 00:27:18,659 [11] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
+2015-04-29 00:27:21,794 [11] ERROR MyRemoteControlServer.ViewModels.MainViewModel - Exception occured: Thread was being aborted.
+2015-04-29 00:27:25,190 [9] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - WindowOnClosing
+2015-04-29 00:28:57,693 [8] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
+2015-04-29 00:28:57,737 [9] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
+2015-04-29 00:28:57,760 [9] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
+2015-04-29 00:29:02,309 [9] ERROR MyRemoteControlServer.ViewModels.MainViewModel - Exception occured: Thread was being aborted.
+2015-04-29 00:29:05,710 [8] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - WindowOnClosing
+2015-04-29 00:29:25,781 [9] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
+2015-04-29 00:29:25,825 [10] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
+2015-04-29 00:29:25,848 [10] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
+2015-04-29 00:29:30,440 [10] ERROR MyRemoteControlServer.ViewModels.MainViewModel - Exception occured: Thread was being aborted.
+2015-04-29 00:29:41,792 [9] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
+2015-04-29 00:29:41,800 [6] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
+2015-04-29 00:29:41,815 [6] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
+2015-04-29 00:29:47,353 [9] INFO  MyRemoteControlServer.ViewModels.MainViewModel - Starting my server.
+2015-04-29 00:29:47,361 [11] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - StartBluetoothService
+2015-04-29 00:29:47,376 [11] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - 00001101-0000-1000-8000-00805f9b34fb
+2015-04-29 00:29:53,952 [9] DEBUG MyRemoteControlServer.ViewModels.MainViewModel - WindowOnClosing
+2015-04-29 00:29:54,086 [11] ERROR MyRemoteControlServer.ViewModels.MainViewModel - Exception occured: Thread was being aborted.

@@ -4,7 +4,8 @@
         xmlns:c="clr-namespace:MyRemoteControlServer.Commands"
         xmlns:wpfspark="clr-namespace:WPFSpark;assembly=WPFSpark"
         xmlns:tb="http://www.hardcodet.net/taskbar"
-        Title="My Remote Control Server" MaxHeight="300" MaxWidth="425" Icon="../Assets/Images/logo.png" ResizeMode="CanMinimize" StateChanged="Window_StateChanged">
+        Title="My Remote Control Server" Height="300" Width="425" Icon="../Assets/Images/logo.png" 
+        ResizeMode="CanMinimize" StateChanged="Window_StateChanged" Closing="Window_Closing">
     <Window.Resources>
         <c:CommandReference x:Key="ServerCommandReference" Command="{Binding ServerCommand}" />
         <LinearGradientBrush x:Key="CheckedStateBrush"
@@ -38,6 +39,12 @@
         </LinearGradientBrush>
     </Window.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
         <Menu HorizontalAlignment="Left" VerticalAlignment="Top" Width="420" Height="25">
             <MenuItem Header="File" VerticalAlignment="Center" Height="25">
                 <MenuItem Header="Start" HorizontalAlignment="Left" Width="140" Command="{Binding StartCommand}">
@@ -64,7 +71,7 @@
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="Help" Height="25">
-                <MenuItem Header="View Help" HorizontalAlignment="Left" Width="140" Click="MenuItem_Click">
+                <MenuItem Header="View Help" HorizontalAlignment="Left" Width="140">
                     <MenuItem.Icon>
                         <Image Width="16"
                                    Height="16"
@@ -72,7 +79,7 @@
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator HorizontalAlignment="Left" Width="140"/>
-                <MenuItem Header="About" HorizontalAlignment="Left" Width="140" Click="MenuItem_Click">
+                <MenuItem Header="About" HorizontalAlignment="Left" Width="140">
                     <MenuItem.Icon>
                         <Image Width="16"
                                    Height="16"
@@ -102,7 +109,7 @@
                                UncheckedForeground="Black"
                                UncheckedText="Stop"
                                VerticalAlignment="Top"
-                               Width="185" IsChecked="{Binding IsChecked}"
+                               Width="185" IsChecked="{Binding IsChecked, Mode=TwoWay}"
                                UncheckedBackground="{StaticResource UncheckedStateBrush}" Command="{StaticResource ServerCommandReference}">
             <wpfspark:ToggleSwitch.BorderBrush>
                 <LinearGradientBrush EndPoint="0,0"
@@ -186,9 +193,12 @@
                     </MenuItem>
                 </ContextMenu>
             </tb:TaskbarIcon.ContextMenu>
-
         </tb:TaskbarIcon>
-        <Label Content="Status: " HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="62" FontWeight="Bold" FontSize="16"/>
-        <Label Content="{Binding StatusMessage}" HorizontalAlignment="Left" Margin="67,192,0,0" VerticalAlignment="Top" Width="338"/>
+
+
+        <StackPanel Height="50" Orientation="Horizontal" Background="GhostWhite" Margin="0,220,0.4,0.4">
+            <Label Content="Status: " HorizontalAlignment="Left"  VerticalAlignment="Top" Width="62" FontWeight="Bold" FontSize="16"/>
+            <Label Content="{Binding StatusMessage}" HorizontalAlignment="Left" Margin="0,4,0,0" VerticalAlignment="Top" Width="338"/>
+        </StackPanel>
     </Grid>
 </Window>

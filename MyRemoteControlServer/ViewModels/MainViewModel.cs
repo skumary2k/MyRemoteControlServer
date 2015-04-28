@@ -17,12 +17,15 @@ namespace MyRemoteControlServer.ViewModels
         private DelegateCommand serverCommand;
         private DelegateCommand startCommand;
         private DelegateCommand stopCommand;
+        private DelegateCommand windowOnClosingCommand;
+
         private string statusMsg;
         private static ILog logger = LogManager.GetLogger(typeof(MainViewModel));
         private Thread conn = null;
         private Guid guid = new Guid("{E075D486-E23D-4887-8AF5-DAA1F6A5B172}");
         private BluetoothListener blueToothListener;
         private bool listeningOnBluetooth = true;
+        private bool blueToothStatus;
 
         public bool IsChecked
         {
@@ -80,6 +83,32 @@ namespace MyRemoteControlServer.ViewModels
             }
         }
 
+        public ICommand WindowOnClosingCommand
+        {
+            get
+            {
+                if (windowOnClosingCommand == null)
+                {
+                    windowOnClosingCommand = new DelegateCommand(WindowOnClosing);
+                }
+                return windowOnClosingCommand;
+            }
+        }
+
+        private void WindowOnClosing()
+        {
+            logger.Debug("WindowOnClosing");
+            this.listeningOnBluetooth = false;
+            if (this.conn != null)
+            {
+                if (this.blueToothListener != null)
+                    this.blueToothListener.Stop();
+                
+                this.conn.Abort();
+            }
+            Environment.Exit(1);
+        }
+
         public ICommand ServerCommand
         {
             get
@@ -95,7 +124,15 @@ namespace MyRemoteControlServer.ViewModels
         public MainViewModel()
         {
             this.statusMsg = ApplicationConstants.SERVER_NOT_STARTED;
+            this.blueToothStatus = BluetoothRadio.IsSupported;
+
+            if (!this.blueToothStatus)
+            {
+                //this.blueButton.Enabled = false;
+                this.StatusMessage = ApplicationConstants.NO_BLUETOOTH_SERVICE;
+            }
         }
+
         private void StartOrStopServer()
         {
             if (!this.IsChecked) StartServer();
@@ -120,6 +157,7 @@ namespace MyRemoteControlServer.ViewModels
                 
                 this.blueToothListener = new BluetoothListener(this.guid);
                 this.blueToothListener.Start();
+                this.IsChecked = false;
                 
                 while (this.listeningOnBluetooth)
                 {
@@ -144,9 +182,11 @@ namespace MyRemoteControlServer.ViewModels
                             streamWriter.Flush();
                         }
                     }
+
                     streamReader.Close();
                     streamWriter.Close();
                     this.StatusMessage = ApplicationConstants.SERVER_LISTENING;
+                    this.IsChecked = false;
                 }
             }
             catch (Exception exception)
@@ -165,6 +205,8 @@ namespace MyRemoteControlServer.ViewModels
                         this.blueToothListener.Stop();
                     this.conn.Abort();
                 }
+                this.IsChecked = true;
+                this.StatusMessage = ApplicationConstants.SERVER_NOT_STARTED;
             }
             catch (Exception ex)
             {
