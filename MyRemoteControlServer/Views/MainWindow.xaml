@@ -189,6 +189,6 @@
 
         </tb:TaskbarIcon>
         <Label Content="Status: " HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="62" FontWeight="Bold" FontSize="16"/>
-        <Label Content="{Binding StatusMessage}" HorizontalAlignment="Left" Margin="67,193,0,0" VerticalAlignment="Top" Width="338"/>
+        <Label Content="{Binding StatusMessage}" HorizontalAlignment="Left" Margin="67,192,0,0" VerticalAlignment="Top" Width="338"/>
     </Grid>
 </Window>
