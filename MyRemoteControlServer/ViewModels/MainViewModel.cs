@@ -5,7 +5,6 @@ using MyRemoteControlServer.Commands;
 using System;
 using System.IO;
 using System.Threading;
-using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 
@@ -22,7 +21,7 @@ namespace MyRemoteControlServer.ViewModels
         private static ILog logger = LogManager.GetLogger(typeof(MainViewModel));
         private Thread conn = null;
         private Guid guid = new Guid("{E075D486-E23D-4887-8AF5-DAA1F6A5B172}");
-        private BluetoothListener btl;
+        private BluetoothListener blueToothListener;
         private bool listeningOnBluetooth = true;
 
         public bool IsChecked
@@ -115,18 +114,18 @@ namespace MyRemoteControlServer.ViewModels
             logger.Debug("StartBluetoothService");
             try
             {
-                BluetoothDeviceInfo bluetoothDeviceInfo = new BluetoothDeviceInfo(BluetoothRadio.PrimaryRadio.LocalAddress);
+                var bluetoothDeviceInfo = new BluetoothDeviceInfo(BluetoothRadio.PrimaryRadio.LocalAddress);
                 logger.Debug(BluetoothService.SerialPort);
                 this.StatusMessage = ApplicationConstants.SERVER_LISTENING;
                 
-                this.btl = new BluetoothListener(this.guid);
-                this.btl.Start();
+                this.blueToothListener = new BluetoothListener(this.guid);
+                this.blueToothListener.Start();
                 
                 while (this.listeningOnBluetooth)
                 {
                     BluetoothClient bluetoothClient = null;
                     this.StatusMessage = ApplicationConstants.SERVER_LISTENING;
-                    bluetoothClient = this.btl.AcceptBluetoothClient();
+                    bluetoothClient = this.blueToothListener.AcceptBluetoothClient();
                     
                     var streamReader = new StreamReader(bluetoothClient.GetStream());
                     var streamWriter = new StreamWriter(bluetoothClient.GetStream());
@@ -158,6 +157,19 @@ namespace MyRemoteControlServer.ViewModels
 
         private void StopServer()
         {
+            try
+            {
+                if (this.conn != null)
+                {
+                    if (this.blueToothListener != null)
+                        this.blueToothListener.Stop();
+                    this.conn.Abort();
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Error while stopping the server: " + ex.Message);
+            }
         }
 
         private void Exit()
